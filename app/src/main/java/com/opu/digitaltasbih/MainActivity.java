@@ -1,9 +1,15 @@
 package com.opu.digitaltasbih;
 
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+import static android.widget.Toast.LENGTH_LONG;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     TextView tCounter;
     Button bAdd, bSub, bReset;
     int count = 0;
+
+    Button bShow, bHide, bToast;
+    ImageView iImg1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,5 +65,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        iImg1 = findViewById(R.id.img1);
+        bShow = findViewById(R.id.btnShow);
+        bHide = findViewById(R.id.btnHide);
+        bToast = findViewById(R.id.btnToast);
+
+        bShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iImg1.setVisibility(VISIBLE);
+            }
+        });
+
+        bHide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iImg1.setVisibility(INVISIBLE);
+            }
+        });
+
+        bToast.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Hello I am a Toast...", LENGTH_LONG).show();
+            }
+        });
     }
 }

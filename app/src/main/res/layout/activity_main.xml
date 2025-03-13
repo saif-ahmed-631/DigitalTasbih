@@ -43,4 +43,30 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:text="Reset" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/card"
+        />
+
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Image" />
+
+    <Button
+        android:id="@+id/btnHide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hide Image" />
+
+    <Button
+        android:id="@+id/btnToast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Toast !  ! !" />
+
 </LinearLayout>
