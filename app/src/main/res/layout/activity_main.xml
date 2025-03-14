@@ -69,4 +69,10 @@
         android:layout_height="wrap_content"
         android:text="Show Toast !  ! !" />
 
+    <Button
+        android:id="@+id/btnAboutMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Me" />
+
 </LinearLayout>

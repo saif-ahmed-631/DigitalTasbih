@@ -4,6 +4,8 @@ import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static android.widget.Toast.LENGTH_LONG;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button bAdd, bSub, bReset;
     int count = 0;
 
-    Button bShow, bHide, bToast;
+    Button bShow, bHide, bToast, bAboutMe;
     ImageView iImg1;
 
 
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         bShow = findViewById(R.id.btnShow);
         bHide = findViewById(R.id.btnHide);
         bToast = findViewById(R.id.btnToast);
+        bAboutMe = findViewById(R.id.btnAboutMe);
 
         bShow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,5 +93,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Hello I am a Toast...", LENGTH_LONG).show();
             }
         });
+
+        bAboutMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent iAboutMe = new Intent(MainActivity.this, AboutMe.class);
+                startActivity(iAboutMe);
+            }
+        });
+
     }
 }
